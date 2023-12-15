@@ -1,6 +1,6 @@
+
 public class Main {
     public static void main(String[] args) {
-        // Creating a HashSet instance
         HashSet<String> stringSet = new HashSet<>();
 
 
@@ -26,6 +26,6 @@ public class Main {
         stringSet.clear();
 
 
-        System.out.println("Is the set empty?: " + stringSet.isEmpty());//
+        System.out.println("Is the set empty?: " + stringSet.isEmpty());
     }
 }
