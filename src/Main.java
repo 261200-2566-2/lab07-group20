@@ -26,6 +26,6 @@ public class Main {
         stringSet.clear();
 
 
-        System.out.println("Is the set empty?: " + stringSet.isEmpty());
+        System.out.println("Is the set empty?: " + stringSet.isEmpty());//
     }
 }
