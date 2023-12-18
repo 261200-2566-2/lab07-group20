@@ -1,17 +1,83 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Iterator;
+import java.util.Set;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+                    //1.add
+                    HashSet <String> set = new HashSet<>();
+                    set.add("A");
+                    set.add("B");
+                    set.add("C");
+                    set.add("D");
+                    set.add("E");
+                    set.printAll();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+
+                    //2.Iterator
+                    Iterator<String> iterator = set.iterator();
+                    System.out.print("The iterator values are: ");
+                    while (iterator.hasNext()) {
+                        System.out.print(iterator.next() + " ");
+                    }
+
+
+                    //3.size
+                    System.out.println("Size of the set: " + set.size());
+
+
+                    //4.contain
+                    System.out.println("Does the set contain 'C'? " + set.contains("C"));
+                    System.out.println("Does the set contain 'F'? " + set.contains("F"));
+
+
+                    //5.remove
+                    set.remove("C");
+                    set.printAll();
+
+
+                    //6.addAll
+                    Set<String> more = new HashSet<>();
+                    more.add("F");
+                    more.add("G");
+                    more.add("H");
+                    more.add("I");
+                    set.addAll(more);
+                    set.printAll();
+
+
+                    //7.containAll
+                    System.out.println("Does the set contain all elements from moreFruits? " + set.containsAll(more));
+
+
+                    //8.retainAll
+                    HashSet<String> retainSet = new HashSet<>();
+                    retainSet.add("C");
+                    retainSet.add("D");
+                    set.retainAll(retainSet);
+
+
+                    //9.removeAll
+                    set.removeAll(more);
+                    set.printAll();
+
+                    //10.clear.
+                    set.clear();
+                    set.printAll();
+
+                    //11.isEmpty.
+                    System.out.println("Is the set empty? " + set.isEmpty());
+
+
+
+
     }
+
 }
+
+
+
+
+
+
+
