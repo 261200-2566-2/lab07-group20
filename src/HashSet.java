@@ -22,7 +22,7 @@ public class HashSet<E> implements Set<E> {
         return map.put(e, PRESENT) == null;
     }
 
-    //2
+    //2.
     @Override
     public Iterator<E> iterator() {
         return map.keySet().iterator();

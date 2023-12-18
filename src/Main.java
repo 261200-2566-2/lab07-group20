@@ -61,7 +61,7 @@ public class Main {
                     set.removeAll(more);
                     set.printAll();
 
-                    //10.clear
+                    //10.clear.
                     set.clear();
                     set.printAll();
 
