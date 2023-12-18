@@ -1,31 +1,83 @@
+import java.util.Iterator;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        HashSet<String> stringSet = new HashSet<>();
+
+                    //1.add
+                    HashSet <String> set = new HashSet<>();
+                    set.add("A");
+                    set.add("B");
+                    set.add("C");
+                    set.add("D");
+                    set.add("E");
+                    set.printAll();
 
 
-        stringSet.add("Neuah");
-        stringSet.add("Nea");
-        stringSet.add("Chin");
+                    //2.Iterator
+                    Iterator<String> iterator = set.iterator();
+                    System.out.print("The iterator values are: ");
+                    while (iterator.hasNext()) {
+                        System.out.print(iterator.next() + " ");
+                    }
 
 
-        System.out.println("There're " + stringSet.size() + " element(s) in the set.");
+                    //3.size
+                    System.out.println("Size of the set: " + set.size());
 
 
-        String searchElement = "Neuah";
-        System.out.println("Is '" + searchElement + "' in the set?: " + stringSet.contains(searchElement));
+                    //4.contain
+                    System.out.println("Does the set contain 'C'? " + set.contains("C"));
+                    System.out.println("Does the set contain 'F'? " + set.contains("F"));
 
 
-        String removedElement = "Neuah";
-        System.out.println("Removing '" + removedElement + "' from the set: " + stringSet.remove(removedElement));
+                    //5.remove
+                    set.remove("C");
+                    set.printAll();
 
 
-        System.out.println("There're " + stringSet.size() + " element(s) in the set.");
+                    //6.addAll
+                    Set<String> more = new HashSet<>();
+                    more.add("F");
+                    more.add("G");
+                    more.add("H");
+                    more.add("I");
+                    set.addAll(more);
+                    set.printAll();
 
 
-        stringSet.clear();
+                    //7.containAll
+                    System.out.println("Does the set contain all elements from moreFruits? " + set.containsAll(more));
 
 
-        System.out.println("Is the set empty?: " + stringSet.isEmpty());//
+                    //8.retainAll
+                    HashSet<String> retainSet = new HashSet<>();
+                    retainSet.add("C");
+                    retainSet.add("D");
+                    set.retainAll(retainSet);
+
+
+                    //9.removeAll
+                    set.removeAll(more);
+                    set.printAll();
+
+                    //10.clear
+                    set.clear();
+                    set.printAll();
+
+                    //11.isEmpty
+                    System.out.println("Is the set empty? " + set.isEmpty());
+
+
+
+
     }
+
 }
+
+
+
+
+
+
+
