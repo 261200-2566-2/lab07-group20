@@ -65,7 +65,7 @@ public class Main {
                     set.clear();
                     set.printAll();
 
-                    //11.isEmpty
+                    //11.isEmpty.
                     System.out.println("Is the set empty? " + set.isEmpty());
 
 

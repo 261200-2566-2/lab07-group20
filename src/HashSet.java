@@ -16,7 +16,7 @@ public class HashSet<E> implements Set<E> {
 
     //__________________________________________________________________________________________________________________
 
-    //1
+    //1.
     @Override
     public boolean add(E e) {
         return map.put(e, PRESENT) == null;
